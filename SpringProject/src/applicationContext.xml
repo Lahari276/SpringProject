@@ -6,6 +6,28 @@
                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="studentbean" class="basics.Student">
-		<property name="name" value="Lahari Reddy"></property>
+		<property name="name" value="lahari"></property>
 	</bean>
-</beans>  
+
+
+	<bean id="employee" class="constructor.injection.Employee">
+		<constructor-arg value="10" type="int"></constructor-arg>
+		<constructor-arg value="lahari"></constructor-arg>
+	</bean>
+
+	<bean id="questionbean" class="constructor.injection.Question">
+		<constructor-arg value="18"></constructor-arg>
+		<constructor-arg value="Where do you Live?"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>I live in Asia</value>
+				<value>In India</value>
+				<value>In Telangana</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+
+
+</beans> 
